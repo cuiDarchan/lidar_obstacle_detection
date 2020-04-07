@@ -1,0 +1,13 @@
+<launch>
+  
+  <!-- Load parameters -->
+
+  <!-- Set the name of lidar pointcloud topic  -->
+  <param name="lidar_topic" value="/lidar/pointcloud" type="string" />
+  <!-- Set the lidar_frame_id  -->
+  <param name="lidar_frame_id" value="map" type="string" />
+  <!-- Set the lidar map path  -->
+  <param name="map_path" value="$(find lidar_obstacle_detection)/data/lidar_map/" />
+
+  <node pkg="lidar_obstacle_detection" type="lidar_obstacle_detection_node" name="lidar_obstacle_detection_node" output="screen" />
+</launch>
